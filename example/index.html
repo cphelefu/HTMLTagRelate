@@ -1,0 +1,268 @@
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>HTMLTagRelate.js</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/animate.min.css">
+	</head>
+<body>
+
+	<div class="container">
+
+		<div class="jumbotron">
+		  <div class="container">
+		    <h1>HTMLTagRelate.js <span class="label label-default versionlabel">v.1.0.0</span></h1>
+		    <p>HTMLTagRelate.js - solving your HTML Tags relationship problems.</p>
+		    <p><a  href="https://github.com/phelefu/HTMLTagRelate" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-floppy-save"></span> Download From GitHub</a></p>
+
+		  </div>
+		</div>
+
+		<!-- Example 1 -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="page-header" id="example1"><h3>Example 1 <small>Change by action [<em>data-relate-action</em>]</small></h3></div>
+				<div class="panel panel-default">
+					 <div class="panel-body">
+					 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						 	<div class="form-group">
+							    <label for="parent1">Parent Input Tag   <small>Enter <blue>"html, tag or relate"</blue> and see what happens.  </small></label>
+							    <input type="text" class="form-control" id="parent1" placeholder="Enter values here.." />
+							</div>
+							<hr/>
+							<div class="form-group">
+							    <label for="child1"> Child Input</label>
+							    <input type="text" class="form-control" id="child1" placeholder="Enter values here.." data-relate-parent="#parent1" data-relate-values="html,tag,relate" data-relate-action="disable" />
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<p><strong>Code of Child Input </strong></p>
+							<pre>
+								&lt;input type="text" class="form-control" id="child1" <tag><br/>data-relate-parent="#parent1" <br/>
+								data-relate-values="html,tag,relate"<br/> data-relate-action="disable"</tag> /&gt;
+						  	</pre>
+						</div>
+					</div>
+					<div class="panel-footer">
+						<p><strong>Description: </strong><tag>relate-action</tag> defines the actions you want to perform when a relationship is validated i.e. when the values entered in the parent element match the values in the <tag>data-relate-values</tag> tag. In the above example we <tag>disable</tag> the child element.<br>
+						<strong>Possible values of <em>data-relate-action</em>: </strong><tag>hide, show, disable, checked(for checkboxes only), hideoption(for select tag only)</tag>.
+				  	</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Example 2 -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="page-header" id="example2"><h3>Example 2 Hiding html elements <small>Using <em>data-relate-action</em> tag on other HTML elements</small></h3></div>
+				<div class="panel panel-default">
+					 <div class="panel-body">
+					 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						 	<div class="form-group">
+							    <label for="parent2">Parent Input Tag   <small>Enter <blue>"html, tag or relate"</blue> and see what happens.  </small></label>
+							    <input type="text" class="form-control" id="parent2" placeholder="Enter values here.." />
+							</div>
+							<hr/>
+							<div class="form-group">
+							    <label for="child2"> Child Input</label>
+							    <div id="child2" data-relate-parent="#parent2" data-relate-values="html,tag,relate" data-relate-action="hide">
+							    	This div will dissapear 
+							    </div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<p><strong>Code of Child Input </strong></p>
+							<pre>
+								&lt;div id="child2" <tag><br/>data-relate-parent="#parent2" <br/>
+								data-relate-values="html,tag,relate"<br/> data-relate-action="disable"</tag> /&gt;
+						  	</pre>
+						</div>
+					</div>
+					<div class="panel-footer">
+						<p><strong>Description: </strong><tag>relate-action</tag> defines the actions you want to perform when a relationship is validated i.e. when the values entered in the parent element match the values in the <tag>data-relate-values</tag> tag. In the above example we <tag>hide</tag> the child element.<br>
+						<strong>Possible values of <em>data-relate-action</em>: </strong><tag>hide, show, disable, checked(for checkboxes only), hideoption(for select tag only)</tag>.
+				  	</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Example 3 -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="page-header" id="example3"><h3>Example 3: Changing attributes in a relationship <small> [<em>relate-attrib, relate-attribvalue-true, relate-attribvalue-false</em>] tag</small></h3></div>
+				
+				<div class="panel panel-default">
+					 <div class="panel-body">
+					 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						 	<div class="form-group">
+							    <label for="parent3">Parent Input Tag   <small>Enter <blue>"html, tag or relate"</blue> and see what happens.  </small></label>
+							    <input type="text" class="form-control" id="parent3" placeholder="Enter values here.." />
+							</div>
+							<hr/>
+							<div class="form-group">
+							    <label for="child3"> Child Input</label>
+							    <input type="text" class="form-control" id="child3" placeholder="Enter values here.." data-relate-parent="#parent3" data-relate-values="html,tag,relate" data-relate-attrib="style" data-relate-attribvalue-true="border:4px solid Red" data-relate-attribvalue-false="border:2px inset" />
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<p><strong>Code of Child Input </strong></p>
+							<pre>
+								&lt;input type="text" class="form-control" id="child3" <tag><br/>data-relate-parent="#parent3" <br/>
+								data-relate-values="html,tag,relate" <br/>data-relate-attrib="style" <br/>data-relate-attribvalue-true="border:4px solid Red"<br/>data-relate-attribvalue-false="border:2px inset"</tag> /&gt;
+						  	</pre>
+						</div>
+					</div>
+					<div class="panel-footer">
+						<p><strong>Description: </strong>Sometimes you want to change the attribute/property on an element based on the input of another element. HTMLTagRelate.js uses the following tags to do that: <tag>relate-attrib, relate-attribvalue-true, relate-attribvalue-false</tag>. As you may have guessed <tag>relate-attrib</tag> identifies the attribute you want to change, <tag>relate-attribvalue-true</tag> defines what you want to set the attribute to when the relationship evaluates to true, <tag>relate-attribvalue-false</tag> defines what you want to set the chosen attribute to if the relationship evaluates to false.<br>
+					<strong>Possible values of relate-attrib: </strong> All possible html attributes. e.g. <tag>class, style, width, height</tag> etc.</p>
+				  	</div>
+				</div>
+			</div>
+		</div>
+
+		<!--- Example 4 -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="page-header" id="example4"><h3>Example 4 Changing attributes in other elements <small>Changing attributes in a relationship [<em>relate-attrib, relate-attribvalue-true, relate-attribvalue-false</em>] tag</small></h3></div>
+				
+				<div class="panel panel-default">
+					 <div class="panel-body">
+					 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						 	<div class="form-group">
+							    <label for="parent4">Parent Input Tag   <small>Enter <blue>"html, tag or relate"</blue> and see what happens.  </small></label>
+							    <input type="text" class="form-control" id="parent4" placeholder="Enter values here.." />
+							</div>
+							<hr/>
+							<div class="form-group">
+							    <label> Child Input</label>
+							    <div id="child4" data-relate-parent="#parent4" data-relate-values="html,tag,relate" data-relate-attrib="style" data-relate-attribvalue-true="background-color:Red" data-relate-attribvalue-false="background-color:#445599"></div>
+								</div>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<p><strong>Code of Child Input </strong></p>
+							<pre>
+								&lt;input type="text" class="form-control" id="child4" <tag><br/>data-relate-parent="#parent4" <br/>
+								data-relate-values="html,tag,relate" <br/>data-relate-attrib="style" <br/>data-relate-attribvalue-true="background-color:Red"<br/>data-relate-attribvalue-false="background-color:#445599"</tag> /&gt;
+						  	</pre>
+						</div>
+					</div>
+					<div class="panel-footer">
+						<p><strong>Description: </strong>Sometimes you want to change the attribute/property on an element based on the input of another element. HTMLTagRelate.js uses the following tags to do that: <tag>relate-attrib, relate-attribvalue-true, relate-attribvalue-false</tag>. As you may have guessed <tag>relate-attrib</tag> identifies the attribute you want to change, <tag>relate-attribvalue-true</tag> defines what you want to set the attribute to when the relationship evaluates to true, <tag>relate-attribvalue-false</tag> defines what you want to set the chosen attribute to if the relationship evaluates to false.<br>
+					<strong>Possible values of relate-attrib: </strong> All possible html attributes. e.g. <tag>class, style, disable, width, height</tag> etc.</p>
+				  	</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Example 5 -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="page-header" id="example5"><h3>Example 5 Working with Select boxes<small>Just working with select boxes</h3></div>
+				
+				<div class="panel panel-default">
+					 <div class="panel-body">
+					 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						 	<div class="form-group">
+							    <label for="parent5">Parent Select Tag  <small>Enter different values and see what happens. </small></label>
+							    <select class="form-control"  id="parent5">
+								    <option value="html">html</option>
+								    <option value="tag">tag</option>
+								    <option value="relate">relate</option>
+								</select>
+							</div>
+							<hr/>
+							<div class="form-group">
+							    <label> Child Input</label>
+							    <select class="form-control" id="child5" data-relate-parent="#parent5" action="hideoption">
+								    <option data-parent-values="html,tag" value="option1">html,tag</option>
+								    <option data-parent-values="html,relate" value="option2">html,relate</option>
+								    <option data-parent-values="tag,relate" value="option3">tag, relate</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<p><strong>Code of Child Input </strong></p>
+							<pre>
+								&lt;select id="child5" <tag>
+								<br/>action="hideoption"
+								<br/>data-relate-parent="#parent5"</tag> <br/>
+								&lt;option <tag>data-parent-values="html,tag"</tag> value="option1"&gt;html,tag&lt;/option&gt; <br/>
+								    &lt;option <tag>data-parent-values="html,relate"</tag> value="option2"&gt;html,relate&lt;/option&gt; <br/>
+								    &lt;option <tag>data-parent-values="tag,relate"</tag> value="option3"&gt;tag,relate&lt;/option&gt; <br/>
+								&lt;/select&gt;
+						  	</pre>
+						</div>
+					</div>
+					<div class="panel-footer">
+						<p><strong>Description: </strong>This example just shows how to use <tag>HTMLTagRelate</tag> with the select element. In the above example when you change selected 
+							values the child select/dropdown will also filter to show options that have <tag>data-parent-values</tag> that correspond to <tag>value</tag> in the parent element.</p>
+				  	</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Example 6 -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="page-header" id="example6"><h3>Example 6 Introducing functions <small>Changing attributes in a relationship [<em>relate-attrib, relate-attribvalue-true, relate-attribvalue-false</em>] tag</small></h3></div>
+				
+				<div class="panel panel-default">
+					 <div class="panel-body">
+					 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						 	<div class="form-group">
+							    <label for="parent6">Parent Input Tag   <small>Enter <blue>"html, tag or relate"</blue> and see what happens.  </small></label>
+							    <input type="text" class="form-control" id="parent6" placeholder="Enter values here.." />
+							</div>
+							<hr/>
+							<div class="form-group">
+							    <label> Child Input</label>
+							     <div id="child6" data-relate-parent="#parent6" data-relate-values="html,tag,relate" data-relate-function-true="growIt()" data-relate-function-false="reduceIt()"></div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<p><strong>Code of Child Input </strong></p>
+							<pre>
+								&lt;div id="child6" <tag><br/>data-relate-parent="#parent6" <br/>
+								data-relate-values="html,tag,relate"<br/>data-relate-function-true="growIt()"<br/>data-relate-function-false="reduceIt()"</tag>&gt; &lt;div/&gt;
+						  	</pre>
+						</div>
+					</div>
+					<div class="panel-footer">
+						<p><strong>Description: </strong>In case you want to call a function when certain value are entered; this is the example for you! HTMLTagRelate.js the tag : <tag>relate-function</tag> to handle this - just specifify the name of the function you would like to call when the relationship is validated.</p>
+				  	</div>
+				</div>
+			</div>
+		</div>
+
+    	<p>&nbsp;</p>
+    	<div class="well">You think this saved you lots of time?
+    	   <form style="display:inline" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+			<input type="hidden" name="cmd" value="_donations">
+			<input type="hidden" name="business" value="cphelefu@yahoo.com">
+			<input type="hidden" name="lc" value="US">
+			<input type="hidden" name="item_name" value="HTMLTagRelate.js support/donation.">
+			<input type="hidden" name="no_note" value="0">
+			<input type="hidden" name="currency_code" value="USD">
+			<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+			<button class="btn btn-success" name="submit" alt="Help us continue free code">Buy me a cup of coffee!</button>
+		</form>
+	</div>
+
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-htmltagrelate-1.0.0.js"  /></script>
+	<script type="text/javascript" src="js/main.js"  /></script>
+	<script type="text/javascript">
+		$.fn.htmltagrelate();
+
+		$(function(){
+			$('.sidenav a').on('click', function(){
+				$('.sidenav a').removeClass('active');
+				$(this).addClass('active');
+			});
+		});
+</script>
+</body>
+</html>

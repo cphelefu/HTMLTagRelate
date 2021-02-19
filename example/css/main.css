@@ -1,0 +1,40 @@
+		.page-header {
+			padding-bottom: 9px;
+			margin: 20px 0 20px;
+			border-bottom: 1px solid #eeeeee;
+		}
+		.highlight {
+			display: none;
+			padding: 9px 14px;
+			margin-bottom: 14px;
+			background-color: #f7f7f9;
+			border: 1px solid #e1e1e8;
+			border-radius: 4px;
+		}
+
+		.panel-footer { font-size: 12px;}
+
+		.active {font-weight:bold;}
+
+		label p {font-weight: normal; }
+
+		h3 em {color: red;}
+
+		code, pre {white-space:normal; color:#336699 ;}
+
+		code .label { font-size:12px; font-weight:bold;}
+
+		tag {color: red; font-style: italic;}
+		blue {color: blue; font-style: italic;}
+
+		.container {max-width:1200px; margin: 0 auto;}
+
+		#child2, #child4, #child6 {width: 95%; height:60px; background-color:#006666; color:#ffffff; text-align: center; vertical-align: middle; border-radius:2%;}
+
+		#child4 { background-color: #445599;}
+
+		#child6 { background-color: #449704; color:#fff; font-size:30px; width:60%;}
+
+		.well { text-align:right; font-weight: bold; font-size:14px;}
+
+		.versionlabel {font-size:24px;}
